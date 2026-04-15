@@ -48,7 +48,7 @@ pip3 install pypresence
 Then clone or download this repo:
 
 ```bash
-git clone https://github.com/l1ckr/fruitycord.git
+git clone https://github.com/l1ckr/Fruitycord.git
 cd fruitycord
 ```
 
