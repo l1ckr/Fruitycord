@@ -1,5 +1,6 @@
 # Fruitycord
 
+<pre>
 ______          _ _                           _ 
 │  ___│        (_) │                         │ │
 │ │_ _ __ _   _ _│ │_ _   _  ___ ___  _ __ __│ │
@@ -8,7 +9,7 @@ ______          _ _                           _
 ╲_│ │_│   ╲__,_│_│╲__│╲__, │╲___╲___╱│_│  ╲__,_│
                        __╱ │                    
                       │___╱                     
-
+</pre>
                                      
 
 Discord Rich Presence for **FL Studio 25** on **macOS**.
@@ -29,13 +30,13 @@ Shows the name of your current project in Discord automatically — no manual in
 
 - macOS (tested on macOS 15)
 - Python 3.8+
-- FL Studio 25 (also works with FL Studio 2024 / 2025)
+- FL Studio (tested with FL Studio 2024 / 2025)
 - Discord desktop app
 
 ## Installation & Use
 
 ```bash
-pip install pypresence
+pip3 install pypresence
 ```
 
 Then clone or download this repo:
@@ -102,6 +103,7 @@ launchctl unload ~/Library/LaunchAgents/com.fruitycord.plist
 ## TODO:
 
 - [x] Project name detection;
+- [ ] Language selection;
 - [ ] Project bpm, plugin, current window activity;
 - [ ] Standalone client launcher and shortcut;
 - [ ] Dock notification for ease of life;
