@@ -18,9 +18,9 @@ ______          _ _                           _
 </p>
              
 
-Discord Rich Presence for **FL Studio 25** on **macOS**.
+Discord Rich Presence for **FL Studio 2025** on **macOS**.
 
-Shows the name of your current project in Discord automatically — no manual input needed.
+Shows the name of your current project in Discord automatically.
 
 ## Features
 
