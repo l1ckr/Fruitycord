@@ -1,10 +1,15 @@
 # Fruitycord
-    ______           _ __                            __
-   ╱ ____╱______  __(_) ╱___  ___________  _________╱ ╱
-  ╱ ╱_  ╱ ___╱ ╱ ╱ ╱ ╱ __╱ ╱ ╱ ╱ ___╱ __ ╲╱ ___╱ __  ╱ 
- ╱ __╱ ╱ ╱  ╱ ╱_╱ ╱ ╱ ╱_╱ ╱_╱ ╱ ╱__╱ ╱_╱ ╱ ╱  ╱ ╱_╱ ╱  
-╱_╱   ╱_╱   ╲__,_╱_╱╲__╱╲__, ╱╲___╱╲____╱_╱   ╲__,_╱   
 
+______          _ _                           _ 
+│  ___│        (_) │                         │ │
+│ │_ _ __ _   _ _│ │_ _   _  ___ ___  _ __ __│ │
+│  _│ '__│ │ │ │ │ __│ │ │ │╱ __╱ _ ╲│ '__╱ _` │
+│ │ │ │  │ │_│ │ │ │_│ │_│ │ (_│ (_) │ │ │ (_│ │
+╲_│ │_│   ╲__,_│_│╲__│╲__, │╲___╲___╱│_│  ╲__,_│
+                       __╱ │                    
+                      │___╱                     
+
+                                     
 
 Discord Rich Presence for **FL Studio 25** on **macOS**.
 
@@ -97,9 +102,10 @@ launchctl unload ~/Library/LaunchAgents/com.fruitycord.plist
 ## TODO:
 
 - [x] Project name detection;
-- [] Standalone client launcher and shortcut;
-- [] Dock notification for ease of life;
-- [] EP on spotify (optional)
+- [ ] Project bpm, plugin, current window activity;
+- [ ] Standalone client launcher and shortcut;
+- [ ] Dock notification for ease of life;
+- [ ] EP on spotify (optional)
 
 ## License
 
