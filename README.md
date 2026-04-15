@@ -10,7 +10,13 @@ ______          _ _                           _
                        __╱ │                    
                       │___╱                     
 </pre>
-                                     
+
+<p allign="center">
+  <!-- <img width="491" height="277" alt="Activity on profile" src="https://github.com/user-attachments/assets/9ad43f8a-7c1f-4003-bdfe-72597f5996c0" /> -->
+  <img width="245.43" height="264.06" alt="IMAGE 2026-04-15 16:48:31" src="https://github.com/user-attachments/assets/6a543207-2447-4d1c-8220-46e30003f344" />
+
+</p>
+             
 
 Discord Rich Presence for **FL Studio 25** on **macOS**.
 
@@ -50,6 +56,9 @@ Run:
 ```bash
 python3 fruitycord.py
 ```
+
+<p allign="center"><img width="682" height="385" alt="happy output" src="https://github.com/user-attachments/assets/43514f7b-afd6-4001-ad39-875876b398b2" />
+</p>
 
 Make sure **"Display current activity as a status message"** is enabled in Discord  
 (Settings → Privacy & Safety).
