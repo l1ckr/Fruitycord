@@ -201,34 +201,37 @@ def get_project_via_lsof(pid: int) -> Optional[str]:
 def get_project_via_spotlight() -> Optional[str]:
     """
     FALLBACK METHOD: finds the most recently used .flp via Spotlight (mdfind).
+
+    Filters by kMDItemLastUsedDate (last time the file was opened), NOT mtime
+    (last save). A project opened today but saved days ago would be missed
+    by an mtime filter — LastUsedDate updates on open regardless of saving.
     """
     try:
+        # Filter by last opened date (7-day window) — survives unsaved sessions
         result = subprocess.run(
             [
                 "mdfind",
                 "-onlyin", os.path.expanduser("~"),
-                'kMDItemFSExtension == "flp"',
+                'kMDItemFSExtension == "flp" && kMDItemLastUsedDate >= $time.today(-7)',
             ],
             capture_output=True,
             text=True,
             timeout=6,
         )
-        now = time.time()
         candidates = []
         for line in result.stdout.splitlines():
             path = line.strip()
             if not path or not os.path.exists(path):
                 continue
-            mtime = os.path.getmtime(path)
-            if now - mtime < 86400:  # last 24 hours
-                candidates.append((mtime, path))
+            candidates.append(path)
+            log.debug("Spotlight candidate: %s", path)
 
         if not candidates:
-            log.debug("Spotlight: no recent .flp files found in last 24h")
+            log.debug("Spotlight: no .flp files opened in the last 7 days")
             return None
 
-        candidates.sort(reverse=True)
-        best_path = candidates[0][1]
+        # Among candidates, pick the most recently saved (mtime)
+        best_path = max(candidates, key=lambda p: os.path.getmtime(p))
         log.debug("Spotlight found: %s", best_path)
         return os.path.splitext(os.path.basename(best_path))[0]
 
